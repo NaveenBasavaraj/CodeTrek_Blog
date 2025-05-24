@@ -12,5 +12,5 @@ COPY . .
 
 # expose & run
 EXPOSE 8000
-CMD ["gunicorn", "--pythonpath", ".", "wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "--pythonpath", "/app", "wsgi:application", "--bind", "0.0.0.0:8000"]
 #CMD ["gunicorn", "settings.wsgi:application", "--bind", "0.0.0.0:8000"]
