@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@a-*x0gi@=x*#z4^oq5300vp=0ze#uls*7*r!hsrns0y^n50qb
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'backend',
     'frontend',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'CodeTrek.urls'
